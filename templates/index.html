@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Prediction Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Tumor Prediction Chatbot</h1>
+        
+        <!-- Image Upload Section -->
+        <div class="upload-section">
+            <h2>Upload MRI Image</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="image-input">Choose an MRI Image:</label>
+                <input type="file" id="image-input" name="image" accept=".jpg,.jpeg,.png" title="Upload MRI Image" required>
+                <button type="submit">Analyze Image</button>
+            </form>
+            <div id="prediction-result"></div>
+        </div>
+        
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <h2>Chat with Assistant</h2>
+            <div id="chat-messages"></div>
+            <form id="chat-form">
+                <label for="user-input">Your Question:</label>
+                <input type="text" id="user-input" name="user-query" placeholder="Ask a question..." title="Enter your question" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

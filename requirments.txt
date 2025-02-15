@@ -1,0 +1,7 @@
+# Create and paste this content:
+flask==3.0.0
+openai==1.12.0
+opencv-python==4.9.0
+numpy==1.26.4
+scikit-learn==1.4.0
+python-dotenv==1.0.1
